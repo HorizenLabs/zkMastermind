@@ -22,7 +22,7 @@ export default function Mastermind() {
         title="zkMastermind x zkVerify"
         description="An on-chain code-breaker game built with zero-knowledge proofs with verification by zkVerify"
         openGraph={{
-          url: "https://zkverify.io",
+          url: "https://zkmastermind.zkverify.io",
           title: "zkMastermind x zkVerify",
           description:
             "An on-chain code-breaker game built with zero-knowledge proofs with verification by zkVerify",

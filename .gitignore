@@ -1,7 +1,3 @@
-# hardhat 
-cache
-artifacts
-
 # circom
 circuit_js/
 *.r1cs
@@ -29,9 +25,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-
-# local env files
-.env*.local
 
 # vercel
 .vercel

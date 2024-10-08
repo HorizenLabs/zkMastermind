@@ -187,7 +187,7 @@ const GameProvider: React.FC<{ children: JSX.Element }> = ({ children }) => {
   const [game, dispatch] = React.useReducer(gameReducer, JSON.parse(JSON.stringify(DEFAULT_GAME)));
   const [verifying, setVerifying] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const { onVerifyProof } = useZkVerify(null);
+  const { onVerifyProof } = useZkVerify();
 
   React.useEffect(() => {
     if (game.solved) {

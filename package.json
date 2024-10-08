@@ -16,7 +16,6 @@
     "@emotion/styled": "^11.10.5",
     "@talismn/connect-components": "^1.1.8",
     "@types/seedrandom": "^3.0.2",
-    "antd": "^5.21.2",
     "circomlib": "^2.0.5",
     "circomlibjs": "^0.1.7",
     "ffjavascript": "^0.2.57",
@@ -34,7 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "18.11.7",
-    "@types/react": "18.0.24",
+    "@types/react": "^18.3.11",
     "@types/react-dom": "18.0.8",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.0",

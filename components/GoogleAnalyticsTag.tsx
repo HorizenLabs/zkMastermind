@@ -1,17 +1,21 @@
 import Script from "next/script";
 
+const GOOGLE_ANALYTICS_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
+
 const GoogleAnalyticsTag = () => {
+  if (!GOOGLE_ANALYTICS_ID) return null;
+
   return (
     <>
       <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-YKZ5ZKZZD5"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
       ></Script>
       <Script id="gtag-script">
         {`window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments)}
          gtag('js', new Date());
-         gtag('config', 'G-YKZ5ZKZZD5');`}
+         gtag('config', '${GOOGLE_ANALYTICS_ID}');`}
       </Script>
     </>
   );

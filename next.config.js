@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -16,6 +15,9 @@ const nextConfig = {
     return config;
   },
 };
+
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+initOpenNextCloudflareForDev();
 
 class WasmChunksFixPlugin {
   apply(compiler) {
@@ -36,4 +38,4 @@ class WasmChunksFixPlugin {
   }
 }
 
-module.exports = nextConfig;
+export default nextConfig;

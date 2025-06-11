@@ -1,25 +1,26 @@
 import {
-    Stack,
-    HStack,
+    Accordion,
+    AccordionButton,
+    AccordionItem,
+    AccordionPanel,
     Box,
-    Grid,
-    GridItem,
     Button,
     Flex,
-    Text,
+    Grid,
+    GridItem,
+    HStack,
     Icon,
+    Stack,
+    Text,
     Tooltip,
-    Accordion,
-    AccordionItem,
-    AccordionButton,
-    AccordionPanel,
 } from "@chakra-ui/react";
-import { useGame, COLORS } from "../context/GameContext";
-import { FaTimes } from "react-icons/fa";
-import { BsShieldCheck } from "react-icons/bs";
-import { useAccount } from "../context/AccountContext";
-import React, { useRef } from "react";
+import { COLORS, useGame } from "../context/GameContext";
 import ConnectWalletButton, { ConnectWalletButtonHandle } from "./ConnectWalletButton";
+import React, { useRef } from "react";
+
+import { BsShieldCheck } from "react-icons/bs";
+import { FaTimes } from "react-icons/fa";
+import { useAccount } from "../context/AccountContext";
 
 const Game: React.FC = () => {
     const { game, dispatch, submit, verify, verifying, error } = useGame();
@@ -193,7 +194,7 @@ const Game: React.FC = () => {
                         {game.logs.map((log, logIndex) => (
                             <Box as={Accordion} key={logIndex} allowToggle>
                                 <AccordionItem border="none">
-                                    {({ isExpanded }) => (
+                                    {({ isExpanded }: { isExpanded: boolean }) => (
                                         <>
                                             <Text
                                                 as={AccordionButton}

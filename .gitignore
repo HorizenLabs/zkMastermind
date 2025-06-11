@@ -16,6 +16,7 @@ circuit_js/
 # next.js
 /.next/
 /out/
+.open-next
 
 # production
 /build
@@ -41,3 +42,4 @@ yarn-error.log*
 next-env.d.ts
 
 .idea
+.wrangler
